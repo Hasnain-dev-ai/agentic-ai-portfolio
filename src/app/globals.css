@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+
+  /* Component colors */
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+
+  /* Gradient colors */
+  --gradient-purple: 267 100% 66%;
+  --gradient-blue: 217 100% 60%;
+  --gradient-cyan: 187 100% 43%;
+
+  /* Radius */
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Base */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  /* Components */
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* Border radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+
+  /* Animations */
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+
+  /* Font family */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles */
+body {
+  @apply bg-background text-foreground min-h-screen antialiased;
+  margin-top: 80;
+}
+
+* {
+  @apply border-border;
+}
+
+/* Custom utility classes */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.bento-box {
+  @apply rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+}
+
+.portal-animation {
+  animation: portal-spin 8s linear infinite;
+}
+
+/* Keyframes */
+@keyframes portal-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* ... (your existing CSS) ... */
+
+/* Tablet mode adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Example: Adjust font sizes for tablet */
+  body {
+    font-size: 1rem; /* Adjust as needed */
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid columns */
+  }
+
+  /* Add other tablet-specific styles here */
+}
+
+/* Mobile mode adjustments (optional, if needed) */
+@media (max-width: 767px) {
+  /* Example: Stack elements vertically on mobile */
+  .bento-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  /* Add other mobile-specific styles here */
+}
+
+/* Desktop mode adjustments (optional) */
+@media (min-width: 1025px) {
+    /* desktop specific styles */
 }

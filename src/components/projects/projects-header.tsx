@@ -1,0 +1,62 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { Search } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { useState } from "react"
+
+export default function ProjectsHeader() {
+  const [searchQuery, setSearchQuery] = useState("")
+
+  return (
+    <section className="w-full py-12 md:py-24">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block rounded-lg bg-muted px-3 py-1 text-sm"
+          >
+            My Work
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+          >
+            Explore My <span className="gradient-text">Projects</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="max-w-[700px] text-muted-foreground md:text-xl"
+          >
+            A collection of my work showcasing my skills and expertise in web development.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="w-full max-w-md mt-6"
+          >
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Search projects..."
+                className="pl-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
