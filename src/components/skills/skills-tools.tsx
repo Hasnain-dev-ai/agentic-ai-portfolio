@@ -84,7 +84,7 @@ export default function SkillsTools() {
   const [hoveredTool, setHoveredTool] = useState<string | null>(null)
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
 
-  const categories = Array.from(new Set(tools.map((tool) => tool.category)))
+
 
   const filteredTools = activeCategory ? tools.filter((tool) => tool.category === activeCategory) : tools
 

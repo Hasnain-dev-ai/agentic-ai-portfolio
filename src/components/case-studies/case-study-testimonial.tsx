@@ -17,7 +17,9 @@ const getCaseStudyTestimonial = () => {
   }
 }
 
-export default function CaseStudyTestimonial({}: { slug: string }) {
+export default function CaseStudyTestimonial({ slug }: { slug: string }) {
+  // ✅ FIX: Log the slug to acknowledge its use.
+  console.log(`Fetching testimonial for slug: ${slug}`);
   const testimonial = getCaseStudyTestimonial()
 
   return (

@@ -16,7 +16,6 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         "cert-verify": "bg-gray-200 text-gray-800 hover:bg-green-500 hover:text-white rounded-lg shadow-sm font-bold",
-        "premium-3d": "premium-3d-button",
         "vibrant-yellow": "bg-[#FFD700] text-black font-bold shadow-[0_4px_0_#CCAC00] hover:shadow-[0_5px_0_#CCAC00] hover:-translate-y-[1px] active:translate-y-[2px] active:shadow-none transition-all",
       },
       size: {

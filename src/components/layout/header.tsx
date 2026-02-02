@@ -3,14 +3,12 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const HEADER_HEIGHT = 70;
 
 export default function Header() {
-    const pathname = usePathname();
     const [isHidden, setIsHidden] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const lastScrollY = useRef(0);

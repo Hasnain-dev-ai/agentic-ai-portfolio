@@ -140,7 +140,7 @@ export default function ContactForm() {
                 </div>
               )}
 
-              <Button type="submit" variant="premium-3d" className="w-full text-sm h-12" disabled={isSubmitting}>
+              <Button type="submit" variant="default" className="w-full text-sm h-12 font-bold" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <div className="flex items-center">
                     <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />

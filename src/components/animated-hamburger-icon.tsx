@@ -7,9 +7,7 @@ interface Props {
   className?: string;
 }
 
-const lineVariants = {
-  transition: { duration: 0.3, ease: "easeInOut" },
-};
+
 
 export default function AnimatedHamburgerIcon({ isOpen, className = '' }: Props) {
   return (

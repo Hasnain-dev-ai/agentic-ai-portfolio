@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect, forwardRef, memo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Search, X, ArrowRight } from "lucide-react"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import {
@@ -84,7 +83,7 @@ function CustomHit({
     return (
         <Link
             ref={ref}
-            href={hit.url || (hit as any).path || "#"}
+            href={hit.url || "#"}
             className={cn(
                 "block p-3 rounded-xl transition-colors group border-b border-border/10 last:border-b-0",
                 isSelected ? "bg-accent/50" : "hover:bg-accent/30"
@@ -110,12 +109,9 @@ function CustomHit({
 
 function SearchResults({
     closeSearch,
-    inputRef,
 }: {
     closeSearch: () => void;
-    inputRef: React.RefObject<HTMLInputElement | null>;
 }) {
-    const router = useRouter();
     const { hits } = useHits();
     const { query, refine } = useSearchBox();
     const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -228,7 +224,7 @@ export default function NavbarSearch({ isActive, setIsActive }: { isActive: bool
                 <AnimatePresence>
                     {isActive && (
                         <div className="absolute top-full left-0 right-0 mt-2">
-                            <SearchResults closeSearch={() => setIsActive(false)} inputRef={inputRef} />
+                            <SearchResults closeSearch={() => setIsActive(false)} />
                         </div>
                     )}
                 </AnimatePresence>

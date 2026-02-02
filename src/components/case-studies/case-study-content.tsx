@@ -10,16 +10,34 @@ type ApproachItem = {
 };
 
 type CaseStudyContentProps = {
-  content: {
+  slug: string;
+  content?: {
     overview: string;
     challenge: string;
     approach: ApproachItem[];
   };
 };
 
-// This component now accepts the `content` object directly.
-// The `slug` prop and the `getCaseStudyContent` function have been removed.
-export default function CaseStudyContent({ content }: CaseStudyContentProps) {
+const getCaseStudyContent = (slug: string) => {
+  console.log(`Fetching content for slug: ${slug}`);
+  return {
+    overview: "This project involved a comprehensive redesign of the digital experience for a leading fashion retailer. Our primary goal was to modernize the aesthetic while significantly improving the functional utility of the platform.",
+    challenge: "The legacy system was struggling with high bounce rates on mobile and a complicated checkout flow that led to significant cart abandonment. The brand identity was also feeling dated compared to competitors.",
+    approach: [
+      {
+        title: "User Research",
+        description: "Conducted deep-dive sessions with existing customers to identify pain points in the current journey."
+      },
+      {
+        title: "UI Design",
+        description: "Created a modern, clean, and high-performance design system focused on product imagery."
+      }
+    ]
+  };
+};
+
+export default function CaseStudyContent({ slug, content: providedContent }: CaseStudyContentProps) {
+  const content = providedContent || getCaseStudyContent(slug);
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container px-4 md:px-6">

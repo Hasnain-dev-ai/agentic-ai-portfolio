@@ -64,7 +64,7 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="badge-3d-grey px-4 py-1.5 rounded-full mb-4">Professional Credentials</div>
+          <Badge variant="modern" className="px-4 py-1.5 rounded-full mb-4">Professional Credentials</Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Certifications & <span className="vibrant-text">Achievements</span>
           </h2>
@@ -108,7 +108,7 @@ export default function Certifications() {
                       </div>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {cert.skills.map((skill) => (
-                          <Badge key={skill} variant="3d-grey">
+                          <Badge key={skill} variant="modern">
                             {skill}
                           </Badge>
                         ))}

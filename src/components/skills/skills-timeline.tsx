@@ -81,7 +81,7 @@ export default function SkillsTimeline() {
                       <CardHeader className={`bg-gradient-to-r ${item.color} text-white`}>
                         <CardTitle className="flex items-center justify-between">
                           <span>{item.title}</span>
-                          <Badge variant="premium-3d" className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                          <Badge variant="modern" className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
                             {item.year}
                           </Badge>
                         </CardTitle>
@@ -90,7 +90,7 @@ export default function SkillsTimeline() {
                         <p className="mb-4">{item.description}</p>
                         <div className="flex flex-wrap gap-2">
                           {item.skills.map((skill) => (
-                            <Badge key={skill} variant="gradient">
+                            <Badge key={skill} variant="modern">
                               {skill}
                             </Badge>
                           ))}

@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+
 import { History, Lightbulb, Clock } from "lucide-react"
 import Image from "next/image"
 
@@ -39,10 +39,10 @@ export default function LegacyProjectCard({ project, index }: { project: LegacyP
             height={500}
           />
           <div className="absolute top-4 left-4 z-20">
-             <Badge className="vibrant-badge-glass-3d flex items-center gap-1.5 border-amber-500/30 text-amber-600 dark:text-amber-400">
-                <Clock className="w-3 h-3" />
-                {project.year}
-             </Badge>
+            <Badge className="vibrant-badge-glass-3d flex items-center gap-1.5 border-amber-500/30 text-amber-600 dark:text-amber-400">
+              <Clock className="w-3 h-3" />
+              {project.year}
+            </Badge>
           </div>
           <div className="absolute bottom-4 left-6 z-20">
             <h3 className="text-2xl font-bold text-white tracking-tight drop-shadow-lg group-hover:translate-x-1 transition-transform duration-500">
@@ -69,7 +69,7 @@ export default function LegacyProjectCard({ project, index }: { project: LegacyP
               </Badge>
             ))}
           </div>
-          
+
           <div className="p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/10 italic text-xs text-indigo-300/80 leading-relaxed relative">
             <Lightbulb className="absolute -top-2 -right-2 w-5 h-5 text-amber-500/40" />
             &quot;{project.legacy_insight}&quot;

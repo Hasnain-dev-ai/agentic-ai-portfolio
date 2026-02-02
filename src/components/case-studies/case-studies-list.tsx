@@ -76,7 +76,7 @@ export default function CaseStudiesList() {
                     <CardHeader className="p-0 mb-4">
                       <div className="flex flex-wrap gap-2 mb-3">
                         {study.tags.map((tag) => (
-                          <Badge key={tag} variant="3d-grey">
+                          <Badge key={tag} variant="modern">
                             {tag}
                           </Badge>
                         ))}
