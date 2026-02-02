@@ -17,9 +17,11 @@ export default function SkillsHeader() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-block rounded-lg bg-muted px-3 py-1 text-sm"
+            className="inline-block"
           >
-            My Expertise
+            <div className="vibrant-badge-glass-3d">
+              My Expertise
+            </div>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -27,7 +29,7 @@ export default function SkillsHeader() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
           >
-            Technical <span className="gradient-text">Skills</span> & Proficiency
+            Technical <span className="vibrant-text">Skills</span> & Proficiency
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +51,7 @@ export default function SkillsHeader() {
                 key={filter}
                 variant={activeFilter === filter ? "default" : "outline"}
                 onClick={() => setActiveFilter(filter)}
-                className={activeFilter === filter ? "bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500" : ""}
+                className={activeFilter === filter ? "bg-[var(--gradient-primary)] text-white shadow-lg" : "bg-[var(--gradient-glass)] border-[var(--gradient-card-border)] text-muted-foreground hover:text-foreground"}
               >
                 {filter}
               </Button>

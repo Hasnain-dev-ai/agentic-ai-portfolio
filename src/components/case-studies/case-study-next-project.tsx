@@ -1,22 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 // This would typically come from a CMS or API
 const getNextProject = (currentSlug: string) => {
+  // ✅ FIX 1: Log the slug to acknowledge its use.
+  console.log(`Fetching next project after slug: ${currentSlug}`);
+
   // Mock data for demonstration
   return {
     title: "AI-Powered Content Management System",
     description: "Building a custom CMS with AI capabilities for a media company",
     slug: "ai-powered-cms",
-  }
-}
+  };
+};
 
-export default function CaseStudyNextProject({ slug }: { slug: string }) {
-  const nextProject = getNextProject(slug)
+// ✅ FIX 2: Changed prop name from `slug` to `currentSlug` for consistency.
+export default function CaseStudyNextProject({ currentSlug }: { currentSlug: string }) {
+  const nextProject = getNextProject(currentSlug);
 
   return (
     <section className="w-full py-12 md:py-24">
@@ -39,6 +43,5 @@ export default function CaseStudyNextProject({ slug }: { slug: string }) {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

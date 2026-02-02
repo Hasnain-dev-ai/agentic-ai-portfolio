@@ -1,0 +1,367 @@
+[
+    {
+      "objectID": "home-page",
+      "type": "page",
+      "title": "Portfolio | Web & Agentic AI Developer - Hasnain Ahmed",
+      "description": "Welcome to Hasnain Ahmed's portfolio. I am a Web & Agentic AI Developer specializing in TypeScript, Next.js, Python and Sanity.io. Explore my featured projects, skills, and testimonials.",
+      "url": "/",
+      "keywords": ["home", "portfolio", "web developer", "agentic ai", "typescript", "next.js", "python", "sanity.io", "featured projects", "skills", "testimonials", "Hasnain Ahmed"],
+      "content_snippet": "This is the home page of Hasnain Ahmed, showcasing an introduction, featured projects in modern web technologies, an overview of key frontend and backend skills, testimonials from satisfied clients, and a call to action."
+    },
+    {
+      "objectID": "projects-page",
+      "type": "page",
+      "title": "Projects | Hasnain Ahmed's Developer Portfolio",
+      "description": "Explore Hasnain Ahmed's diverse projects showcasing his skills in TypeScript, Next.js, Python, and more, including web applications, CLI tools, and AI solutions.",
+      "url": "/projects",
+      "keywords": ["projects", "portfolio", "typescript", "next.js", "python", "web development", "case studies", "frontend", "backend", "Hasnain Ahmed"],
+      "content_snippet": "A grid of various projects developed by Hasnain Ahmed. Each project highlights different technologies and problem-solving approaches, with links to detailed case studies or live demos. Technologies used include TypeScript, Next.js, Python, Sanity.io, Stripe, and ShipEngine."
+    },
+    {
+      "objectID": "project-ecommerce-platform",
+      "type": "project",
+      "title": "E-commerce Platform with Next.js and Stripe",
+      "description": "A full-stack e-commerce solution leveraging Next.js for the frontend, Sanity.io for content management, and Stripe for payment processing, developed by Hasnain Ahmed.",
+      "url": "/projects/ecommerce-platform",
+      "keywords": ["project", "e-commerce", "next.js", "stripe", "sanity.io", "typescript", "full-stack", "Hasnain Ahmed"],
+      "tags": ["Next.js", "Stripe", "Sanity.io", "TypeScript", "E-commerce"],
+      "technologies": ["Next.js", "React", "TypeScript", "Node.js", "Stripe API", "Sanity.io", "Tailwind CSS"],
+      "content_snippet": "Hasnain Ahmed developed a scalable e-commerce platform with features like product listings, shopping cart, user authentication, and secure checkout, focusing on performance and user experience."
+    },
+    {
+      "objectID": "project-portfolio-site-v1",
+      "type": "project",
+      "title": "Personal Developer Portfolio Site v1",
+      "description": "This is Hasnain Ahmed's personal developer portfolio site, showcasing projects, skills, and expertise built with Next.js and Tailwind CSS.",
+      "url": "/projects/portfolio-site-v1",
+      "keywords": ["portfolio", "next.js", "typescript", "tailwind css", "web design", "responsive design", "personal website", "UI/UX", "Hasnain Ahmed"],
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Algolia", "Nodemailer"],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Algolia", "Nodemailer"],
+      "content_snippet": "Hasnain Ahmed's portfolio site features responsive design, dark/light mode, custom animations, and integrated Algolia search, reflecting his front-end development capabilities."
+    },
+    {
+      "objectID": "project-streamlit-data-dashboard",
+      "type": "project",
+      "title": "Interactive Data Dashboard with Streamlit and Python",
+      "description": "Hasnain Ahmed developed an interactive web dashboard for data visualization and analysis using Streamlit, powered by Python.",
+      "url": "/projects/streamlit-data-dashboard",
+      "keywords": ["Python", "Streamlit", "Data Visualization", "Data Analysis", "Dashboard", "Web Application", "Machine Learning", "Hasnain Ahmed"],
+      "tags": ["Python", "Streamlit", "Pandas", "Matplotlib", "Plotly"],
+      "technologies": ["Python", "Streamlit", "Pandas", "Matplotlib", "Plotly"],
+      "content_snippet": "This project by Hasnain Ahmed demonstrates dynamic charts, real-time data updates, user input forms, and data filtering capabilities within a scalable backend built with Streamlit and Python."
+    },
+    {
+      "objectID": "case-studies-page",
+      "type": "page",
+      "title": "Case Studies | Hasnain Ahmed's Work",
+      "description": "In-depth analysis of selected projects by Hasnain Ahmed, detailing the challenges, solutions, and outcomes.",
+      "url": "/case-studies",
+      "keywords": ["case studies", "project analysis", "problem solving", "web development", "outcomes", "Hasnain Ahmed"],
+      "content_snippet": "A collection of detailed case studies from Hasnain Ahmed's portfolio, each explaining project goals, the development process, technologies used, and the results achieved through his expertise."
+    },
+    {
+      "objectID": "case-study-ecommerce-figma-to-deployment",
+      "type": "case-study",
+      "title": "E-commerce Platform from Figma to Full Deployment",
+      "description": "A comprehensive case study by Hasnain Ahmed on transforming UI/UX Figma designs into a fully functional e-commerce platform, covering frontend, backend, and payment integration.",
+      "url": "/case-studies/ecommerce-platform-case-study",
+      "keywords": ["e-commerce", "UI/UX", "Figma", "Next.js", "Stripe", "Sanity.io", "TypeScript", "Full-stack", "Project Management", "Case Study", "Hasnain Ahmed"],
+      "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Sanity.io", "Stripe API", "Node.js", "Figma"],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Sanity.io", "Stripe API", "Node.js", "Figma"],
+      "content_snippet": "Hasnain Ahmed successfully delivered a scalable e-commerce solution with enhanced user experience, robust payment processing, and efficient content management, leading to improved conversion rates from initial design mockups."
+    },
+    {
+      "objectID": "case-study-resume-builder-hackathon",
+      "type": "case-study",
+      "title": "Innovative Resume Builder - A Hackathon Success Story by Hasnain Ahmed",
+      "description": "Detailing the development process and key innovations behind a resume builder application created by Hasnain Ahmed during a 5-project hackathon.",
+      "url": "/case-studies/resume-builder-hackathon-case-study",
+      "keywords": ["Resume Builder", "Hackathon", "Web Application", "UI/UX", "Project Management", "Node.js", "Express.js", "React", "Hasnain Ahmed"],
+      "tags": ["React", "Node.js", "Express.js", "HTML", "CSS", "PDF generation"],
+      "technologies": ["React", "Node.js", "Express.js", "HTML", "CSS", "PDF generation library"],
+      "content_snippet": "Hasnain Ahmed developed a feature-rich resume builder with PDF export and customizable templates, demonstrating rapid prototyping and effective teamwork under time constraints during a challenging hackathon."
+    },
+    {
+      "objectID": "case-study-python-oop-project",
+      "type": "case-study",
+      "title": "Comprehensive Python OOP Project by Hasnain Ahmed with 21 Assignments",
+      "description": "An in-depth look at a large-scale Python Object-Oriented Programming (OOP) project by Hasnain Ahmed, integrating 21 practical assignments into a single cohesive application.",
+      "url": "/case-studies/python-oop-project-case-study",
+      "keywords": ["Python", "OOP", "Object-Oriented Programming", "Software Development", "Educational Project", "Code Structure", "Design Patterns", "Hasnain Ahmed"],
+      "tags": ["Python", "OOP"],
+      "technologies": ["Python"],
+      "content_snippet": "Hasnain Ahmed demonstrated mastery of advanced OOP principles in this project, creating highly modular and reusable code, and successfully implementing complex functionalities through practical application of 21 assignments."
+    },
+    {
+      "objectID": "case-study-typescript-cli-tools",
+      "type": "case-study",
+      "title": "TypeScript CLI Tools for Developer Workflow Automation by Hasnain Ahmed",
+      "description": "A case study on designing and implementing a suite of command-line interface (CLI) tools using TypeScript by Hasnain Ahmed to streamline common development tasks.",
+      "url": "/case-studies/typescript-cli-tools-case-study",
+      "keywords": ["TypeScript", "CLI", "Command Line", "Automation", "Developer Tools", "Node.js", "Productivity", "Utility", "Hasnain Ahmed"],
+      "tags": ["TypeScript", "Node.js", "CLI Tools"],
+      "technologies": ["TypeScript", "Node.js", "Commander.js"],
+      "content_snippet": "Hasnain Ahmed developed robust and efficient CLI tools that automated repetitive tasks, significantly improving development workflow and reducing manual errors for internal processes using TypeScript."
+    },
+    {
+      "objectID": "services-page",
+      "type": "page",
+      "title": "Services | Hasnain Ahmed's Developer Portfolio",
+      "description": "Hasnain Ahmed offers professional web development services including frontend, backend, and full-stack solutions, alongside Agentic AI development.",
+      "url": "/services",
+      "keywords": ["services", "web development", "frontend", "backend", "full-stack", "agentic ai", "api development", "typescript", "next.js", "python", "sanity.io", "consulting", "Hasnain Ahmed"],
+      "content_snippet": "Explore the comprehensive services offered by Hasnain Ahmed: Frontend Development (React, Next.js, TypeScript, TailwindCSS), Backend Development (Python, Node.js, API design), Full-Stack Solutions, Agentic AI Development, Sanity.io integration, E-commerce solutions, and Performance Optimization."
+    },
+    {
+      "objectID": "service-frontend",
+      "type": "service",
+      "title": "Frontend Development Services by Hasnain Ahmed",
+      "description": "Hasnain Ahmed crafts responsive and performant user interfaces with modern technologies like Next.js, TypeScript, and Tailwind CSS.",
+      "url": "/services#frontend",
+      "keywords": ["frontend", "ui", "ux", "next.js", "typescript", "tailwindcss", "react", "Hasnain Ahmed"],
+      "content_snippet": "Hasnain Ahmed specializes in creating beautiful and intuitive user experiences. His expertise covers the React ecosystem, state management, and building accessible web applications."
+    },
+    {
+      "objectID": "service-agentic-ai",
+      "type": "service",
+      "title": "Agentic AI Development Services by Hasnain Ahmed",
+      "description": "Hasnain Ahmed builds intelligent agents and AI-powered applications to automate tasks and provide smart solutions.",
+      "url": "/services#agentic-ai",
+      "keywords": ["agentic ai", "artificial intelligence", "python", "automation", "machine learning", "Hasnain Ahmed"],
+      "content_snippet": "Hasnain Ahmed focuses on developing custom AI agents using Python and relevant frameworks to streamline processes, analyze data, and create innovative AI-driven features for businesses."
+    },
+    {
+      "objectID": "service-full-stack",
+      "type": "service",
+      "title": "Full-Stack Development Services by Hasnain Ahmed",
+      "description": "Hasnain Ahmed provides end-to-end web solutions from robust backend APIs to intuitive user interfaces, ensuring seamless integration and performance.",
+      "url": "/services#full-stack",
+      "keywords": ["full-stack", "web development", "backend", "frontend", "api development", "database design", "next.js", "python", "node.js", "Hasnain Ahmed"],
+      "content_snippet": "Hasnain Ahmed delivers comprehensive full-stack development, combining strong backend architecture with engaging frontend experiences, ensuring complete and high-performing web applications."
+    },
+    {
+      "objectID": "service-api-development",
+      "type": "service",
+      "title": "API Development & Integration Services by Hasnain Ahmed",
+      "description": "Hasnain Ahmed designs, builds, and integrates secure and scalable RESTful and GraphQL APIs to power modern web applications and microservices.",
+      "url": "/services#api-development",
+      "keywords": ["API development", "RESTful API", "GraphQL", "integration", "backend", "node.js", "python", "microservices", "Hasnain Ahmed"],
+      "content_snippet": "Hasnain Ahmed specializes in creating robust and efficient APIs that serve as the backbone for complex applications, ensuring smooth data flow and seamless third-party integrations."
+    },
+    {
+      "objectID": "service-ui-ux-design",
+      "type": "service",
+      "title": "UI/UX Design & Implementation by Hasnain Ahmed",
+      "description": "Hasnain Ahmed transforms concepts into engaging and user-friendly interfaces, focusing on accessibility, responsiveness, and aesthetic appeal.",
+      "url": "/services#ui-ux-design",
+      "keywords": ["UI/UX Design", "user interface", "user experience", "Figma", "web design", "responsive design", "accessibility", "frontend", "Hasnain Ahmed"],
+      "content_snippet": "Hasnain Ahmed brings designs to life, ensuring optimal user interaction and visual appeal. His process focuses on creating intuitive and accessible interfaces that enhance the overall user journey."
+    },
+    {
+      "objectID": "skills-page",
+      "type": "page",
+      "title": "Skills | Hasnain Ahmed's Developer Portfolio",
+      "description": "Explore Hasnain Ahmed's technical skills and expertise in web development, programming, and design. Specializing in TypeScript, Next.js, Python, and Agentic AI.",
+      "url": "/skills",
+      "keywords": ["skills", "typescript", "next.js", "python", "sanity.io", "tailwindcss", "html", "css", "javascript", "react", "node.js", "api", "agentic ai", "web development", "programming", "design", "shipengine", "stripe", "Hasnain Ahmed"],
+      "content_snippet": "A comprehensive showcase of Hasnain Ahmed's technical skills, including Languages (TypeScript, Python, JavaScript), Frameworks (Next.js, React, Express.js), CMS (Sanity.io), Styling (TailwindCSS, CSS Modules), APIs (Stripe, ShipEngine), Databases, and AI/ML tools."
+    },
+    {
+      "objectID": "skill-typescript",
+      "type": "skill",
+      "title": "TypeScript Skill",
+      "description": "Hasnain Ahmed is proficient in TypeScript for building scalable and maintainable web applications with strong type safety.",
+      "url": "/skills#typescript",
+      "keywords": ["typescript", "javascript", "static typing", "frontend", "backend", "Hasnain Ahmed"],
+      "proficiency": "Advanced",
+      "content_snippet": "Hasnain Ahmed utilizes TypeScript to enhance code quality and reduce errors in complex web applications, ensuring robust and scalable solutions."
+    },
+    {
+      "objectID": "skill-nextjs",
+      "type": "skill",
+      "title": "Next.js Skill",
+      "description": "Hasnain Ahmed has expertise in building high-performance, SEO-friendly React applications with server-side rendering, static site generation, and API routes using Next.js.",
+      "url": "/skills#nextjs",
+      "keywords": ["Next.js", "React.js", "SSR", "SSG", "Frontend Framework", "Web Development", "Hasnain Ahmed"],
+      "proficiency": "Advanced",
+      "content_snippet": "Hasnain Ahmed leverages Next.js to deliver fast, optimized, and scalable web experiences, ensuring excellent user engagement and search engine visibility."
+    },
+    {
+      "objectID": "skill-python",
+      "type": "skill",
+      "title": "Python Skill",
+      "description": "Hasnain Ahmed has a strong command of Python for backend development, data analysis, scripting, and building AI/ML applications.",
+      "url": "/skills#python",
+      "keywords": ["Python", "Backend Development", "Scripting", "Data Science", "Machine Learning", "AI", "Hasnain Ahmed"],
+      "proficiency": "Advanced",
+      "content_snippet": "Hasnain Ahmed applies Python across various domains, from crafting robust APIs to performing complex data analysis and developing intelligent AI solutions."
+    },
+    {
+      "objectID": "skill-agentic-ai",
+      "type": "skill",
+      "title": "Agentic AI Development Skill",
+      "description": "Hasnain Ahmed is experienced in designing and implementing intelligent AI agents using Python and frameworks like OpenAI Agents SDK for automation and smart solutions.",
+      "url": "/skills#agentic-ai",
+      "keywords": ["Agentic AI", "AI", "Artificial Intelligence", "OpenAI Agents SDK", "Python", "Automation", "Machine Learning", "Hasnain Ahmed"],
+      "proficiency": "Advanced",
+      "content_snippet": "Hasnain Ahmed develops cutting-edge AI agents that automate complex tasks and provide innovative solutions, leveraging Python and advanced AI frameworks."
+    },
+    {
+      "objectID": "skill-tailwindcss",
+      "type": "skill",
+      "title": "Tailwind CSS Skill",
+      "description": "Hasnain Ahmed is skilled in rapidly building custom user interfaces with Tailwind CSS for efficient, utility-first styling and responsive design.",
+      "url": "/skills#tailwindcss",
+      "keywords": ["Tailwind CSS", "CSS Framework", "Styling", "UI/UX", "Responsive Design", "Frontend", "Hasnain Ahmed"],
+      "proficiency": "Advanced",
+      "content_snippet": "Hasnain Ahmed uses Tailwind CSS to accelerate UI development, creating clean, modern, and highly responsive web designs efficiently."
+    },
+    {
+      "objectID": "skill-sanityio",
+      "type": "skill",
+      "title": "Sanity.io CMS Skill",
+      "description": "Hasnain Ahmed is proficient in headless content management with Sanity.io, enabling flexible content modeling and seamless integration with modern web frameworks.",
+      "url": "/skills#sanityio",
+      "keywords": ["Sanity.io", "CMS", "Headless CMS", "Content Management", "Content Modeling", "API", "Hasnain Ahmed"],
+      "proficiency": "Intermediate",
+      "content_snippet": "Hasnain Ahmed leverages Sanity.io to empower clients with flexible content structures, ensuring easy content updates and powerful data management for their web applications."
+    },
+    {
+      "objectID": "skill-web-design-principles",
+      "type": "skill",
+      "title": "Web Design Principles Skill",
+      "description": "Hasnain Ahmed possesses a strong understanding of web design principles, including visual hierarchy, typography, color theory, and user-centered design to create engaging web experiences.",
+      "url": "/skills#web-design-principles",
+      "keywords": ["Web Design", "UI Design", "UX Design", "Visual Design", "Design Principles", "Aesthetics", "Hasnain Ahmed"],
+      "proficiency": "Intermediate",
+      "content_snippet": "Hasnain Ahmed applies fundamental web design principles to create visually appealing and highly usable interfaces that resonate with target audiences."
+    },
+    {
+      "objectID": "skill-seo",
+      "type": "skill",
+      "title": "Search Engine Optimization (SEO) Skill",
+      "description": "Hasnain Ahmed is knowledgeable in implementing SEO best practices for web applications to improve search engine rankings and organic visibility.",
+      "url": "/skills#seo",
+      "keywords": ["SEO", "Search Engine Optimization", "Web Performance", "Visibility", "Marketing", "Hasnain Ahmed"],
+      "proficiency": "Intermediate",
+      "content_snippet": "Hasnain Ahmed integrates SEO strategies into his development process, ensuring that web applications are optimized for discoverability and higher search engine rankings."
+    },
+    {
+      "objectID": "skill-graphic-design",
+      "type": "skill",
+      "title": "Graphic Design Skill",
+      "description": "Hasnain Ahmed has basic proficiency in graphic design tools and principles for creating visual assets, logos, and branding elements for web projects.",
+      "url": "/skills#graphic-design",
+      "keywords": ["Graphic Design", "Visual Arts", "Design Tools", "Branding", "Hasnain Ahmed"],
+      "proficiency": "Basic",
+      "content_snippet": "Hasnain Ahmed applies basic graphic design knowledge to enhance the visual appeal of web projects, supporting branding and aesthetic consistency."
+    },
+    {
+      "objectID": "about-page",
+      "type": "page",
+      "title": "About Hasnain Ahmed | Web & Agentic AI Developer",
+      "description": "Learn more about Hasnain Ahmed's journey as a Web & Agentic AI Developer, his passion for technology, and his approach to building innovative solutions. With an Economics Master's and OAT Certified IBA-IET, Hasnain is a Vibe Coder.",
+      "url": "/about",
+      "keywords": ["about me", "bio", "developer journey", "passion", "experience", "Hasnain Ahmed", "Economics Master's", "OAT Certified", "IBA-IET", "Vibe Coder", "Web & Agentic AI Developer", "Hasnain Ahmed's background"],
+      "content_snippet": "This page provides detailed information about Hasnain Ahmed's background, professional experience, interests, and development philosophy, focusing on problem-solving and creating user-centric applications using modern technologies like Next.js, Python, TypeScript, and Sanity.io."
+    },
+    {
+      "objectID": "about-education",
+      "type": "about-section",
+      "title": "Hasnain Ahmed's Education Background",
+      "description": "Overview of Hasnain Ahmed's academic journey, including an Economics Master's degree and OAT Certified IBA-IET.",
+      "url": "/about#education",
+      "keywords": ["education", "academic", "university", "master's degree", "IBA-IET", "OAT Certified", "Hasnain Ahmed"],
+      "content_snippet": "Details of Hasnain Ahmed's educational qualifications, highlighting key achievements and relevant coursework that shaped his analytical and problem-solving skills, contributing to his proficiency as a developer."
+    },
+    {
+      "objectID": "about-experience",
+      "type": "about-section",
+      "title": "Hasnain Ahmed's Professional Experience",
+      "description": "A summary of Hasnain Ahmed's professional career as a developer, showcasing roles, responsibilities, and key accomplishments.",
+      "url": "/about#experience",
+      "keywords": ["experience", "professional career", "work history", "developer", "Hasnain Ahmed", "projects", "roles", "professional journey"],
+      "content_snippet": "A chronological overview of Hasnain Ahmed's work experience, detailing his contributions to various projects and the technologies he has mastered in real-world scenarios, demonstrating his growth as a full-stack and AI developer."
+    },
+    {
+      "objectID": "about-story",
+      "type": "about-section",
+      "title": "The Story of Hasnain Ahmed: A Developer's Journey",
+      "description": "Discover Hasnain Ahmed's personal journey into web and AI development, his motivations, and philosophy.",
+      "url": "/about#story",
+      "keywords": ["story", "journey", "developer philosophy", "passion", "motivation", "Hasnain Ahmed", "personal story", "development philosophy"],
+      "content_snippet": "Hasnain Ahmed shares his unique path into the world of web development and Agentic AI, driven by curiosity and a desire to build impactful solutions that make a difference."
+    },
+    {
+      "objectID": "blog-page",
+      "type": "page",
+      "title": "Blog | Articles & Insights by Hasnain Ahmed",
+      "description": "Articles and insights by Hasnain Ahmed on web development, Next.js, TypeScript, Agentic AI, and other technology topics.",
+      "url": "/blog",
+      "keywords": ["blog", "articles", "web development", "next.js", "typescript", "agentic ai", "tech insights", "Hasnain Ahmed"],
+      "content_snippet": "A collection of blog posts written by Hasnain Ahmed, covering a range of technical topics, best practices, and innovative solutions in web development and artificial intelligence."
+    },
+    {
+      "objectID": "blog-post-performant-nextjs",
+      "type": "blogPost",
+      "title": "Building Performant Next.js Applications",
+      "date": "2025-03-15",
+      "category": "Next.js",
+      "author": "Hasnain Ahmed",
+      "url": "/blog/building-performant-nextjs-applications",
+      "keywords": ["next.js", "performance", "image optimization", "code splitting", "ssr", "ssg", "web development", "Hasnain Ahmed", "optimization"],
+      "tags": ["Next.js", "Performance", "Optimization", "Web Development"],
+      "content_snippet": "Hasnain Ahmed's guide to optimizing Next.js applications for speed and user experience, covering image optimization, code splitting, SSR, and SSG. Performance is a critical aspect of user experience, influencing user retention and search engine rankings."
+    },
+    {
+      "objectID": "blog-post-getting-started-agentic-ai",
+      "type": "blogPost",
+      "title": "Getting Started with Agentic AI in Python",
+      "date": "2025-05-20",
+      "category": "AI",
+      "author": "Hasnain Ahmed",
+      "url": "/blog/getting-started-agentic-ai-python",
+      "keywords": ["Agentic AI", "AI", "Python", "Artificial Intelligence", "Machine Learning", "Automation", "Development", "Hasnain Ahmed"],
+      "tags": ["Agentic AI", "Python", "AI Development"],
+      "content_snippet": "Hasnain Ahmed's beginner's guide to understanding and building your first intelligent agents using Python and key AI frameworks. This article introduces core concepts and demonstrates how to create simple AI-driven applications."
+    },
+    {
+      "objectID": "blog-post-mastering-typescript",
+      "type": "blogPost",
+      "title": "Mastering TypeScript for Scalable Web Applications",
+      "date": "2025-04-10",
+      "category": "TypeScript",
+      "author": "Hasnain Ahmed",
+      "url": "/blog/mastering-typescript-scalable-web-apps",
+      "keywords": ["TypeScript", "JavaScript", "Frontend", "Backend", "Full-stack", "Type Safety", "Scalability", "Web Development", "Hasnain Ahmed"],
+      "tags": ["TypeScript", "Scalability", "Web Development"],
+      "content_snippet": "Hasnain Ahmed explores advanced TypeScript features and best practices for developing robust, scalable, and maintainable web applications. This post delves into concepts like generics, decorators, and utility types."
+    },
+    {
+      "objectID": "contact-page",
+      "type": "page",
+      "title": "Contact Hasnain Ahmed | Developer Portfolio",
+      "description": "Get in touch with Hasnain Ahmed for project inquiries, collaborations, or just to say hello.",
+      "url": "/contact",
+      "keywords": ["contact", "get in touch", "collaboration", "project inquiry", "email", "social media", "Hasnain Ahmed"],
+      "content_snippet": "This page provides a contact form and other ways to reach Hasnain Ahmed, such as email address or links to social profiles, for any inquiries or potential collaborations."
+    },
+    {
+      "objectID": "resume-download-page",
+      "type": "page",
+      "title": "Download Hasnain Ahmed's Resume",
+      "description": "Get a comprehensive overview of Hasnain Ahmed's skills, experience, and education in a downloadable PDF format.",
+      "url": "/resume",
+      "keywords": ["resume", "cv", "download", "skills", "experience", "education", "pdf", "Hasnain Ahmed"],
+      "content_snippet": "A dedicated section allowing users to download Hasnain Ahmed's professional resume, providing a detailed summary of his qualifications and career history."
+    },
+    {
+      "objectID": "search-page",
+      "type": "page",
+      "title": "Search | Hasnain Ahmed's Portfolio",
+      "description": "Search through Hasnain Ahmed's projects, articles, skills, and case studies on his portfolio website.",
+      "url": "/search",
+      "keywords": ["search", "find", "portfolio", "projects", "articles", "skills", "case studies", "Hasnain Ahmed"],
+      "content_snippet": "This page provides the search interface for Hasnain Ahmed's portfolio, powered by Algolia, allowing users to find content across the entire site in real-time."
+    }
+  ]

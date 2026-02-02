@@ -13,7 +13,7 @@ const testimonials = [
       "Working with this developer was an absolute pleasure. They delivered a high-quality website that exceeded our expectations. Their attention to detail and technical expertise are impressive.",
     author: "Sarah Johnson",
     role: "CEO, TechStart",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const testimonials = [
       "The developer's ability to translate our vision into a functional and beautiful website was remarkable. They were responsive, professional, and delivered on time.",
     author: "Michael Chen",
     role: "Marketing Director, InnovateCorp",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const testimonials = [
       "I was impressed by the developer's technical skills and creativity. They suggested solutions we hadn't even considered and implemented them flawlessly.",
     author: "Emily Rodriguez",
     role: "Product Manager, DesignHub",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const testimonials = [
       "The developer's expertise in both frontend and backend technologies made our project a success. They were able to handle complex requirements with ease.",
     author: "David Kim",
     role: "CTO, FutureTech",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/placeholder",
   },
 ]
 
@@ -56,7 +56,7 @@ export default function Testimonials() {
   }, [autoplay])
 
   return (
-    <section className="w-full py-12 md:py-24">
+    <section className="w-full px-4 py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <motion.div
@@ -64,7 +64,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="inline-block rounded-lg bg-muted px-3 py-1 text-sm"
+            className="vibrant-badge-glass-3d"
           >
             Testimonials
           </motion.div>
@@ -75,7 +75,7 @@ export default function Testimonials() {
             viewport={{ once: true }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
           >
-            What Clients <span className="gradient-text">Say</span>
+            What Clients <span className="vibrant-text">Say</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ export default function Testimonials() {
             viewport={{ once: true }}
             className="max-w-[700px] text-muted-foreground md:text-xl"
           >
-            Feedback from clients I've had the pleasure of working with.
+            Feedback from clients I&apos;ve had the pleasure of working with.
           </motion.p>
         </div>
 
@@ -100,7 +100,7 @@ export default function Testimonials() {
                   <Card className="bg-card/50 backdrop-blur-sm">
                     <CardContent className="pt-6">
                       <Quote className="h-8 w-8 text-muted-foreground mb-4" />
-                      <p className="text-lg md:text-xl italic">"{testimonial.content}"</p>
+                      <p className="text-lg md:text-xl italic">&quot;{testimonial.content}&quot;</p>
                     </CardContent>
                     <CardFooter className="flex items-center space-x-4 pt-4 pb-6">
                       <Avatar>
@@ -128,9 +128,8 @@ export default function Testimonials() {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  index === activeIndex ? "bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500" : "bg-muted"
-                }`}
+                className={`h-2 w-2 rounded-full transition-colors ${index === activeIndex ? "bg-[var(--gradient-primary)] shadow-md" : "bg-[var(--gradient-card-border)]"
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}

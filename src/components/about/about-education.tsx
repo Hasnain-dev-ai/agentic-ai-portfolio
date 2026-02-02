@@ -43,9 +43,9 @@ export default function AboutEducation() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Education & Certifications</div>
+          <div className="vibrant-badge-glass-3d">Education & Certifications</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Academic <span className="gradient-text">Background</span>
+            Academic <span className="vibrant-text">Background</span>
           </h2>
         </motion.div>
 

@@ -1,44 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
-// This would typically come from a CMS or API
-const getCaseStudyContent = (slug: string) => {
-  // Mock data for demonstration
-  return {
-    overview:
-      "The client, a fashion retailer with an existing e-commerce platform, was experiencing high bounce rates and low conversion. They approached me to redesign their user experience and optimize performance to increase sales.",
-    challenge:
-      "The main challenges included a complex checkout process, slow page load times (especially on mobile), and a confusing navigation structure. The site was built on an outdated tech stack that made updates difficult and slow.",
-    approach: [
-      {
-        title: "Research & Analysis",
-        description:
-          "Conducted user interviews, analyzed heatmaps and user flows to identify pain points in the existing experience.",
-      },
-      {
-        title: "Technology Selection",
-        description:
-          "Recommended migrating to Next.js for improved performance and developer experience, with TypeScript for type safety.",
-      },
-      {
-        title: "UX Redesign",
-        description:
-          "Simplified the checkout process from 5 steps to 2, redesigned product pages to highlight key information, and implemented a more intuitive navigation system.",
-      },
-      {
-        title: "Performance Optimization",
-        description:
-          "Implemented image optimization, code splitting, and server-side rendering for critical paths to improve load times.",
-      },
-    ],
-  }
-}
+// Define a type for the content prop for better type safety
+type ApproachItem = {
+  title: string;
+  description: string;
+};
 
-export default function CaseStudyContent({ slug }: { slug: string }) {
-  const content = getCaseStudyContent(slug)
+type CaseStudyContentProps = {
+  content: {
+    overview: string;
+    challenge: string;
+    approach: ApproachItem[];
+  };
+};
 
+// This component now accepts the `content` object directly.
+// The `slug` prop and the `getCaseStudyContent` function have been removed.
+export default function CaseStudyContent({ content }: CaseStudyContentProps) {
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container px-4 md:px-6">
@@ -84,6 +65,5 @@ export default function CaseStudyContent({ slug }: { slug: string }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

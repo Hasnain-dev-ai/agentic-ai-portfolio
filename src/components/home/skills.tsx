@@ -70,7 +70,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section className="w-full py-12 md:py-24 bg-muted/50">
+    <section className="w-full px-4 py-12 md:py-24 bg-muted/50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <motion.div
@@ -78,7 +78,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="inline-block rounded-lg bg-background px-3 py-1 text-sm"
+            className="vibrant-badge-glass-3d"
           >
             My Expertise
           </motion.div>
@@ -89,7 +89,7 @@ export default function Skills() {
             viewport={{ once: true }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
           >
-            Professional <span className="gradient-text">Skills</span>
+            Professional <span className="vibrant-text">Skills</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function Skills() {
           className="mt-12"
         >
           <Tabs defaultValue="frontend" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
+            <TabsList className="grid w-full grid-cols-4 md:grid-cols-4">
               {skillCategories.map((category) => (
                 <TabsTrigger key={category.id} value={category.id} className="flex items-center gap-2">
                   {category.icon}

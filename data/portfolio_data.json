@@ -1,0 +1,134 @@
+[
+    {
+      "objectID": "home-page",
+      "type": "page",
+      "title": "Portfolio | Web & Agentic AI Developer",
+      "description": "Web & Agentic AI Developer specializing in TypeScript, Next.js, Python and Sanity.io. Explore featured projects, skills, and testimonials.",
+      "path": "/",
+      "keywords": ["home", "portfolio", "web developer", "agentic ai", "typescript", "next.js", "python", "sanity.io", "featured projects", "skills", "testimonials"],
+      "content": "Hero section with introduction. Featured projects showcasing skills in modern web technologies. Overview of key skills including frontend and backend development. Testimonials from satisfied clients. Call to action to get in touch."
+    },
+    {
+      "objectID": "projects-page",
+      "type": "page",
+      "title": "Projects | Developer Portfolio",
+      "description": "Explore my projects showcasing my skills in TypeScript, Next.js, Python, and more.",
+      "path": "/projects",
+      "keywords": ["projects", "portfolio", "typescript", "next.js", "python", "web development", "case studies", "frontend", "backend"],
+      "content": "A grid of various projects. Each project might link to a detailed case study or live demo. Technologies used: TypeScript, Next.js, Python, Sanity.io, Stripe, ShipEngine."
+    },
+    {
+      "objectID": "project-example-1",
+      "type": "project",
+      "title": "E-commerce Platform with Next.js and Stripe",
+      "description": "A full-stack e-commerce solution leveraging Next.js for the frontend, Sanity.io for content management, and Stripe for payment processing.",
+      "path": "/projects/ecommerce-platform",
+      "keywords": ["project", "e-commerce", "next.js", "stripe", "sanity.io", "typescript", "full-stack"],
+      "tags": ["Next.js", "Stripe", "Sanity.io", "TypeScript", "E-commerce"],
+      "technologies": ["Next.js", "React", "TypeScript", "Node.js", "Stripe API", "Sanity.io"],
+      "content_snippet": "Developed a scalable e-commerce platform with features like product listings, shopping cart, user authentication, and secure checkout..."
+    },
+    {
+      "objectID": "case-studies-page",
+      "type": "page",
+      "title": "Case Studies",
+      "description": "In-depth analysis of selected projects, detailing the challenges, solutions, and outcomes.",
+      "path": "/case-studies",
+      "keywords": ["case studies", "project analysis", "problem solving", "web development", "outcomes"],
+      "content": "Collection of detailed case studies for significant projects. Each case study explains the project goals, development process, technologies used, and results achieved."
+    },
+    {
+      "objectID": "services-page",
+      "type": "page",
+      "title": "Services | Developer Portfolio",
+      "description": "Professional web development services including frontend, backend, and full-stack solutions, Agentic AI development.",
+      "path": "/services",
+      "keywords": ["services", "web development", "frontend", "backend", "full-stack", "agentic ai", "api development", "typescript", "next.js", "python", "sanity.io", "consulting"],
+      "content": "Services offered: Frontend Development (React, Next.js, TypeScript, TailwindCSS), Backend Development (Python, Node.js, API design), Full-Stack Solutions, Agentic AI Development, Sanity.io integration, E-commerce solutions, Performance Optimization."
+    },
+    {
+      "objectID": "service-frontend",
+      "type": "service",
+      "title": "Frontend Development",
+      "description": "Crafting responsive and performant user interfaces with modern technologies like Next.js, TypeScript, and Tailwind CSS.",
+      "path": "/services#frontend",
+      "keywords": ["frontend", "ui", "ux", "next.js", "typescript", "tailwindcss", "react"],
+      "content": "Specializing in creating beautiful and intuitive user experiences. Expertise in React ecosystem, state management, and building accessible web applications."
+    },
+    {
+      "objectID": "service-agentic-ai",
+      "type": "service",
+      "title": "Agentic AI Development",
+      "description": "Building intelligent agents and AI-powered applications to automate tasks and provide smart solutions.",
+      "path": "/services#agentic-ai",
+      "keywords": ["agentic ai", "artificial intelligence", "python", "automation", "machine learning"],
+      "content": "Developing custom AI agents using Python and relevant frameworks to streamline processes, analyze data, and create innovative AI-driven features."
+    },
+    {
+      "objectID": "skills-page",
+      "type": "page",
+      "title": "Skills | Developer Portfolio",
+      "description": "Explore my technical skills and expertise in web development, programming, and design. Specializing in TypeScript, Next.js, Python, and Agentic AI.",
+      "path": "/skills",
+      "keywords": ["skills", "typescript", "next.js", "python", "sanity.io", "tailwindcss", "html", "css", "javascript", "react", "node.js", "api", "agentic ai", "web development", "programming", "design", "shipengine", "stripe"],
+      "content": "Showcase of technical skills: Languages (TypeScript, Python, JavaScript), Frameworks (Next.js, React, Express.js), CMS (Sanity.io), Styling (TailwindCSS, CSS Modules), APIs (Stripe, ShipEngine), Databases, AI/ML tools."
+    },
+    {
+      "objectID": "skill-typescript",
+      "type": "skill",
+      "title": "TypeScript",
+      "description": "Proficient in TypeScript for building scalable and maintainable web applications with strong type safety.",
+      "path": "/skills#typescript",
+      "keywords": ["typescript", "javascript", "static typing", "frontend", "backend"],
+      "proficiency": "Advanced"
+    },
+    {
+      "objectID": "about-page",
+      "type": "page",
+      "title": "About Me",
+      "description": "Learn more about my journey as a Web & Agentic AI Developer, my passion for technology, and my approach to building innovative solutions.",
+      "path": "/about",
+      "keywords": ["about me", "bio", "developer journey", "passion", "experience"],
+      "content": "Detailed information about my background, professional experience, interests, and development philosophy. Focus on problem-solving and creating user-centric applications."
+    },
+    {
+      "objectID": "blog-page",
+      "type": "page",
+      "title": "Blog",
+      "description": "Articles and insights on web development, Next.js, TypeScript, Agentic AI, and other technology topics.",
+      "path": "/blog",
+      "keywords": ["blog", "articles", "web development", "next.js", "typescript", "agentic ai", "tech insights"],
+      "content": "A collection of blog posts. Each post could be a separate record too."
+    },
+    {
+      "objectID": "blog-post-performant-nextjs",
+      "type": "blogPost",
+      "title": "Building Performant Next.js Applications",
+      "date": "2025-03-15",
+      "category": "Next.js",
+      "author": "John Developer",
+      "path": "/blog/building-performant-nextjs-applications",
+      "keywords": ["next.js", "performance", "image optimization", "code splitting", "ssr", "ssg", "web development"],
+      "tags": ["Next.js", "Performance", "Optimization", "Web Development"],
+      "content_snippet": "Next.js has become one of the most popular React frameworks... Performance is a critical aspect of user experience...",
+      "full_content": "<p>Next.js has become one of the most popular React frameworks for building modern web applications. Its built-in features like server-side rendering, static site generation, and API routes make it a powerful choice for developers looking to build performant applications.</p><h2>Why Performance Matters</h2><p>Performance is a critical aspect of user experience...</p>"
+    },
+    {
+      "objectID": "contact-page",
+      "type": "page",
+      "title": "Contact | Developer Portfolio",
+      "description": "Get in touch with me for project inquiries, collaborations, or just to say hello.",
+      "path": "/contact",
+      "keywords": ["contact", "get in touch", "collaboration", "project inquiry", "email", "social media"],
+      "content": "Contact form and other ways to reach out, like email address or links to social profiles."
+    },
+    {
+      "objectID": "resume-download-page",
+      "type": "page",
+      "title": "Download My Resume",
+      "description": "Get a comprehensive overview of my skills, experience, and education in a downloadable PDF format.",
+      "path": "/resume",
+      "keywords": ["resume", "cv", "download", "skills", "experience", "education", "pdf"],
+      "content": "A section allowing users to download your resume. The resume content itself could be indexed if desired, but might be too large or redundant if skills are listed separately."
+    }
+  ]

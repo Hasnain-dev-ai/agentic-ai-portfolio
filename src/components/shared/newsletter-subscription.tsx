@@ -59,7 +59,7 @@ export default function NewsletterSubscription() {
             <form onSubmit={handleSubmit} className="flex space-x-2">
               <Input
                 type="email"
-                placeholder="hasnainzahoor@gmail.com"
+                placeholder="hasnain.dev.ai@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

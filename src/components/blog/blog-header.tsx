@@ -17,9 +17,11 @@ export default function BlogHeader() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-block rounded-lg bg-muted/80 backdrop-blur-sm px-3 py-1 text-sm"
+            className="inline-block"
           >
-            My Blog
+            <div className="vibrant-badge-glass-3d">
+              My Blog
+            </div>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

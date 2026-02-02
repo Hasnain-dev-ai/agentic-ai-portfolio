@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main className="flex flex-col items-center justify-center w-full">
+    <main className="flex flex-col items-center justify-center w-full relative page-projects">
+      <div className="bg-page-projects" />
       <ProjectsHeader />
       <ProjectsGrid />
     </main>

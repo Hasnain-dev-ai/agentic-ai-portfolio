@@ -1,182 +1,67 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react"; // Added useRef
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import SearchDialog from "@/components/shared/search-dialog";
-import DimensionPortalToggle from "@/components/dimension-portal-toggle";
 
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
-  { name: "Case Studies", path: "/case-studies" },
-  { name: "Services", path: "/services" },
-  { name: "Skills", path: "/skills" },
-  { name: "About", path: "/about" },
-  { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
-];
-
-const HEADER_HEIGHT = 70; // Approximate height of your header, adjust as needed
-const SCROLL_THRESHOLD = 5; // How much user needs to scroll before header reacts
+const HEADER_HEIGHT = 70;
 
 export default function Header() {
-  const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const [isHidden, setIsHidden] = useState(false); // State to control visibility
-  const lastScrollY = useRef(0); // To store the last scroll position
+    const pathname = usePathname();
+    const [isHidden, setIsHidden] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const lastScrollY = useRef(0);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsHidden(
+                window.scrollY > lastScrollY.current && window.scrollY > HEADER_HEIGHT
+            );
+            setIsScrolled(window.scrollY > 0);
+            lastScrollY.current = window.scrollY;
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-  // Effect for scroll-based header visibility
-  useEffect(() => {
-    if (!isMounted) return;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (Math.abs(currentScrollY - lastScrollY.current) < SCROLL_THRESHOLD) {
-        // Not enough scroll, do nothing
-        return;
-      }
-
-      if (currentScrollY > lastScrollY.current && currentScrollY > HEADER_HEIGHT) {
-        // Scrolling down and past header height
-        setIsHidden(true);
-      } else {
-        // Scrolling up or at the top
-        setIsHidden(false);
-      }
-      lastScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMounted]); // Rerun when isMounted changes
-
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
-
-  if (!isMounted) return null;
-
-  return (
-    <motion.header
-      initial={{ y: 0 }} // Start at the top directly
-      animate={{ y: isHidden ? -HEADER_HEIGHT -10 : 0 }} // Animate based on isHidden state
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 px-6 py-4", // Removed transition-all duration-300 as framer-motion handles it
-        "bg-background/90 backdrop-blur-lg shadow-md"
-      )}
-      style={{ height: `${HEADER_HEIGHT}px` }} // Optional: set a fixed height for consistency
-    >
-      <div className="container mx-auto flex justify-between items-center h-full"> {/* Ensure content stays within header height */}
-        <Link href="/" className="flex items-center space-x-2">
-          <motion.div
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.5 }}
-            className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 flex items-center justify-center overflow-hidden shrink-0"
-          >
-            <Image
-              src="/profile.png"
-              alt="Hasnain Ahmed Logo"
-              width={40}
-              height={40}
-              className="object-cover w-full h-full"
-              priority
-            />
-          </motion.div>
-          <span className="font-bold text-lg sm:text-xl">
-            Hasnain Ahmed
-          </span>
-        </Link>
-        <div className="flex items-center space-x-3">
-          <div className="hidden md:block">
-            <SearchDialog />
-          </div>
-          <motion.div
-            className="md:hidden bg-background/90 backdrop-blur-lg p-2 rounded-full shadow-md"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            // onClick={() => setIsOpen(!isOpen)} // This was for mobile menu, SearchDialog handles its own state
-          >
-            <div className="w-8 h-8 flex items-center justify-center">
-              <div className="text-white">
-                <SearchDialog /> {/* Ensure SearchDialog opens correctly here */}
-              </div>
-            </div>
-          </motion.div>
-          <DimensionPortalToggle />
-          <div className="md:hidden">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsOpen(!isOpen)}
-              className="bg-background/90 backdrop-blur-lg p-2 rounded-full shadow-md"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
-          </div>
-        </div>
-
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden fixed top-[4.5rem] inset-x-0 mx-6 bg-white rounded-xl p-4 shadow-2xl"
-              style={{ top: `${HEADER_HEIGHT}px`}} // Adjust if needed based on header height
-            >
-              <div className="flex flex-col space-y-2">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    href={item.path}
-                    onClick={() => setIsOpen(false)}
-                    className="block"
-                  >
-                    <motion.div
-                      whileHover={{ x: 5 }}
-                      className={cn(
-                        "px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300",
-                        pathname === item.path
-                          ? "bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white"
-                          : "text-foreground hover:bg-accent/50"
-                      )}
+    return (
+        <motion.header
+            initial={{ y: -HEADER_HEIGHT }}
+            animate={{ y: isHidden ? -HEADER_HEIGHT : 0 }}
+            className={cn(
+                "fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ease-in-out bg-transparent",
+                isScrolled
+                    ? "bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-border/50 shadow-sm"
+                    : "bg-transparent"
+            )}
+            style={{ height: `${HEADER_HEIGHT}px` }}
+        >
+            <div className="container mx-auto flex justify-between items-center h-full px-4 sm:px-6 lg:px-12">
+                {/* Logo Section - Left */}
+                <div className="flex items-center">
+                    <Link
+                        href="/"
+                        className="flex items-center space-x-2 sm:space-x-3 group"
                     >
-                      {item.name}
-                    </motion.div>
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.header>
-  );
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 overflow-hidden border-2 border-transparent group-hover:border-black dark:group-hover:border-white transition-all shadow-lg active:scale-95">
+                            <Image
+                                src="/ha.png"
+                                alt="Logo"
+                                width={48}
+                                height={48}
+                                priority
+                                className="object-cover"
+                            />
+                        </div>
+                        <span className="font-montez font-bold text-lg sm:text-2xl text-foreground tracking-tight hidden xs:block">
+                            Hasnain Ahmed
+                        </span>
+                    </Link>
+                </div>
+            </div>
+        </motion.header>
+    );
 }

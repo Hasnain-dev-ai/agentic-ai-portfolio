@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "esnext",             // Target a recent Node.js version
+      "module": "CommonJS",           // Use CommonJS modules for Node.js scripts
+      "moduleResolution": "Node",     // Crucial: Use Node.js-specific module resolution
+      "strict": true,                 // Enable all strict type-checking options
+      "esModuleInterop": true,        // Allows default imports from CommonJS modules (like `dotenv/config`)
+      "skipLibCheck": true,           // Skip type checking of all declaration files (*.d.ts)
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "../dist-scripts",    // Optional: Where compiled JS files would go if you run `tsc -p scripts`
+      "baseUrl": ".",
+      "paths": {
+        // If your scripts need to import from your main project (e.g., @/lib)
+        "@/*": ["../src/*"] // Adjust based on your actual source folder structure
+      }
+    },
+    "include": ["**/*.ts"],          // Include all TypeScript files within this directory
+    "exclude": ["node_modules"]
+  }

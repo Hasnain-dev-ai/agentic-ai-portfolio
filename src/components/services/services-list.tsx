@@ -67,9 +67,9 @@ export default function ServicesList() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full">
+              <Card className="h-full bg-card border-border shadow-md hover:shadow-xl transition-all duration-300">
                 <CardHeader>
-                  <div className="rounded-full bg-primary/10 p-3 w-fit mb-4">{service.icon}</div>
+                  <div className="rounded-full bg-black dark:bg-white text-white dark:text-black p-4 w-fit mb-4 flex items-center justify-center shadow-lg">{service.icon}</div>
                   <CardTitle>{service.title}</CardTitle>
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>

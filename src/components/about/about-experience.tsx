@@ -45,9 +45,9 @@ export default function AboutExperience() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Work Experience</div>
+          <div className="vibrant-badge-glass-3d">Work Experience</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Professional <span className="gradient-text">Journey</span>
+            Professional <span className="vibrant-text">Journey</span>
           </h2>
         </motion.div>
 
@@ -73,7 +73,7 @@ export default function AboutExperience() {
                     <div className="md:text-right">
                       <div className="flex flex-wrap gap-2 mt-4 md:mt-0 md:justify-end">
                         {experience.technologies.map((tech) => (
-                          <Badge key={tech} variant="secondary">
+                          <Badge key={tech} variant="default" className="shadow-md">
                             {tech}
                           </Badge>
                         ))}

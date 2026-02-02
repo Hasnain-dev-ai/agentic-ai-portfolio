@@ -1,8 +1,14 @@
-"use client"
+"use client"; // Keep this, it's necessary for useRouter
 
-import { useEffect, useState } from "react"
-import BlogPost from "@/components/blog/blog-post"
-import NewsletterSubscription from "@/components/shared/newsletter-subscription"
+import { useEffect, useState } from "react";
+import BlogPost from "@/components/blog/blog-post";
+import NewsletterSubscription from "@/components/shared/newsletter-subscription";
+import { useRouter } from "next/navigation"; // Import useRouter for App Router
+// If you were using the Pages Router (e.g., pages/blog/[slug].tsx), it would be:
+// import { useRouter } from "next/router";
+
+import { ChevronLeft } from "lucide-react"; // Import the back arrow icon
+import { Button } from "@/components/ui/button"; // Import your Button component
 
 // Mock blog post data - in a real app, this would come from a CMS or API
 const mockPost = {
@@ -12,7 +18,7 @@ const mockPost = {
   category: "Next.js",
   author: {
     name: "John Developer",
-    avatar: "/placeholder.svg",
+    avatar: "/placeholder",
   },
   content: `
     <p>Next.js has become one of the most popular React frameworks for building modern web applications. Its built-in features like server-side rendering, static site generation, and API routes make it a powerful choice for developers looking to build performant applications.</p>
@@ -30,7 +36,7 @@ const mockPost = {
 export default function MyComponent() {
   return (
     &lt;Image
-      src="/profile.jpg"
+      src="/proprofile.png"
       alt="Profile Picture"
       width={500}
       height={500}
@@ -54,23 +60,37 @@ export default function MyComponent() {
     <h2>Conclusion</h2>
     <p>Performance optimization is an ongoing process, not a one-time task. By leveraging Next.js's built-in features and following best practices, you can create fast, responsive applications that provide an excellent user experience.</p>
   `,
-}
+};
 
 export default function BlogPostPage() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
+  const router = useRouter(); // Initialize the router hook
 
   // This ensures that the component only renders on the client
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
     <main className="flex flex-col items-center justify-center w-full py-12 md:py-24">
       <div className="container px-4 md:px-6">
+        {/* --- Back Button Added Here --- */}
+        <div className="mb-8">
+          <Button
+            variant="ghost" // Use a subtle ghost variant
+            onClick={() => router.back()} // Navigates back in browser history
+            className="flex items-center text-muted-foreground hover:text-foreground transition-colors group" // Added group for potential future hover effects
+          >
+            <ChevronLeft className="h-5 w-5 mr-2 group-hover:-translate-x-1 transition-transform" /> {/* Icon with subtle hover animation */}
+            Back to Blog
+          </Button>
+        </div>
+        {/* --- End Back Button --- */}
+
         <BlogPost post={mockPost} />
 
         <div className="mt-16">
@@ -82,6 +102,5 @@ export default function BlogPostPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }
-

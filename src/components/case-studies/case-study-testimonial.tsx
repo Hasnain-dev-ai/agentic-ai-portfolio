@@ -13,7 +13,7 @@ const getCaseStudyTestimonial = () => {
       "The redesign completely transformed our online presence. Not only did we see immediate improvements in sales, but our team now has a platform that's easy to maintain and update. The developer's attention to detail and focus on both user experience and performance made all the difference.",
     author: "Sarah Johnson",
     role: "E-Commerce Director, Fashion Retailer Inc.",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/placeholder",
   }
 }
 

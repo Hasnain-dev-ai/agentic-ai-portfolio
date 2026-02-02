@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { useState } from "react"
+import { cn } from "@/lib/utils"
 
 const tools = [
   {
@@ -97,9 +98,9 @@ export default function SkillsTools() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm">Tools & Software</div>
+          <div className="modern-badge px-4 py-1.5 rounded-full mb-4">Tools & Software</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            My Development <span className="gradient-text">Toolkit</span>
+            My Development <span className="bg-clip-text text-transparent bg-[image:var(--gradient-text-rich)]">Toolkit</span>
           </h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
             The tools, software, and platforms I use to streamline my development workflow.
@@ -115,23 +116,21 @@ export default function SkillsTools() {
         >
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              activeCategory === null
-                ? "bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white"
-                : "bg-card text-muted-foreground hover:text-foreground"
-            }`}
+            className={cn(
+              "filter-tab whitespace-nowrap",
+              activeCategory === null && "active"
+            )}
           >
             All
           </button>
-          {categories.map((category) => (
+          {["Frontend", "Backend", "Languages", "Frameworks", "Tools", "Design"].map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeCategory === category
-                  ? "bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white"
-                  : "bg-card text-muted-foreground hover:text-foreground"
-              }`}
+              className={cn(
+                "filter-tab whitespace-nowrap",
+                activeCategory === category && "active"
+              )}
             >
               {category}
             </button>
@@ -150,7 +149,7 @@ export default function SkillsTools() {
               onHoverStart={() => setHoveredTool(tool.name)}
               onHoverEnd={() => setHoveredTool(null)}
             >
-              <Card className="h-full overflow-hidden">
+              <Card className="h-full overflow-hidden border-border bg-card shadow-md hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <motion.div
                     animate={{

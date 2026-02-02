@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="flex flex-col items-center justify-center w-full">
+    <main className="flex flex-col items-center justify-center w-full relative page-services">
+      <div className="bg-page-services" />
       <ServicesHeader />
       <ServicesList />
       <ServicesProcess />

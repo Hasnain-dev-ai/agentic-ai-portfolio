@@ -1,0 +1,45 @@
+[
+    {
+        "id": "legacy-1",
+        "title": "PHP Management System",
+        "description": "A robust administrative dashboard built in the early 2020s. Manual SQL queries, server-side rendering, and heavy jQuery usage.",
+        "year": "2021",
+        "era": "Manual Craftsmanship",
+        "tags": [
+            "PHP",
+            "MySQL",
+            "jQuery",
+            "Bootstrap"
+        ],
+        "legacy_insight": "In the pre-AI era, every data relationship was mapped by hand. Today, our agents handle the schema evolution autonomously.",
+        "image": "/images/legacy/php-dash.png"
+    },
+    {
+        "id": "legacy-2",
+        "title": "Interactive Portfolio V1",
+        "description": "The first iteration of my digital presence. Focused on CSS animations and static site generation.",
+        "year": "2022",
+        "era": "The Design Awakening",
+        "tags": [
+            "HTML",
+            "CSS",
+            "Vanilla JS"
+        ],
+        "legacy_insight": "We used to spend hours debugging float layouts. Now, CSS Grid and AI-assisted design systems make this trivial.",
+        "image": "/images/legacy/v1-portfolio.png"
+    },
+    {
+        "id": "legacy-3",
+        "title": "Early React SaaS Template",
+        "description": "A foundational React application exploring component-based architecture and early state management patterns.",
+        "year": "2023",
+        "era": "Component Revolution",
+        "tags": [
+            "React 17",
+            "Redux",
+            "Sass"
+        ],
+        "legacy_insight": "State management was a battleground. In 2026, real-time agentic sync has replaced complex manual state trees.",
+        "image": "/images/legacy/react-saas.png"
+    }
+]

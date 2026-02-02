@@ -16,22 +16,22 @@ const getCaseStudyGallery = (slug: string) => {
     {
       title: "Homepage Redesign",
       description: "The new homepage focuses on showcasing featured products and promotions.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/placeholder",
     },
     {
       title: "Product Page",
       description: "Redesigned product pages with clear CTAs and improved product information.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/placeholder",
     },
     {
       title: "Checkout Process",
       description: "Simplified checkout process reduced from 5 steps to just 2.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/placeholder",
     },
     {
       title: "Mobile Experience",
       description: "Fully responsive design optimized for mobile users.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/placeholder",
     },
   ]
 }
@@ -83,7 +83,7 @@ export default function CaseStudyGallery({ slug }: { slug: string }) {
               >
                 <div className="aspect-video w-full overflow-hidden">
                   <Image
-                    src={item.image || "/placeholder.svg"}
+                    src={item.image || "/placeholder"}
                     alt={item.title}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                     width={800}
@@ -106,7 +106,7 @@ export default function CaseStudyGallery({ slug }: { slug: string }) {
             onClick={() => setLightboxOpen(false)}
           >
             <Image
-              src={gallery[activeImage].image || "/placeholder.svg"}
+              src={gallery[activeImage].image || "/placeholder"}
               alt={gallery[activeImage].title}
               className="w-full rounded-lg"
               width={800}

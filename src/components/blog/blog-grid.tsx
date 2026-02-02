@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { useState } from "react"
 import Image from "next/image"
@@ -15,7 +16,7 @@ const blogPosts = [
     date: "March 15, 2025",
     readTime: "8 min read",
     category: "Next.js",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/backgrounds/bg-projects.png",
     icon: "🚀",
   },
   {
@@ -25,7 +26,7 @@ const blogPosts = [
     date: "March 10, 2025",
     readTime: "6 min read",
     category: "TypeScript",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/backgrounds/bg-skills.png",
     icon: "📘",
   },
   {
@@ -35,7 +36,7 @@ const blogPosts = [
     date: "March 5, 2025",
     readTime: "10 min read",
     category: "Web Development",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/backgrounds/bg-services.png",
     icon: "🔌",
   },
   {
@@ -45,7 +46,7 @@ const blogPosts = [
     date: "February 28, 2025",
     readTime: "7 min read",
     category: "Python",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/backgrounds/bg-about.png",
     icon: "🐍",
   },
   {
@@ -55,7 +56,7 @@ const blogPosts = [
     date: "February 20, 2025",
     readTime: "9 min read",
     category: "UI/UX",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/backgrounds/bg-contact.png",
     icon: "🎨",
   },
   {
@@ -65,19 +66,46 @@ const blogPosts = [
     date: "February 15, 2025",
     readTime: "11 min read",
     category: "Web Development",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/images/backgrounds/bg-home.png",
     icon: "🔮",
   },
 ]
 
+const categories = ["All", "Web Development", "TypeScript", "Next.js", "Python", "UI/UX"]
+
 export default function BlogGrid() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const [activeCategory, setActiveCategory] = useState("All")
+
+  const filteredPosts = activeCategory === "All"
+    ? blogPosts
+    : blogPosts.filter(post => post.category === activeCategory)
 
   return (
     <section className="w-full py-12 md:py-24 relative z-10">
       <div className="container px-4 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-wrap justify-center gap-2 mb-12"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={cn(
+                "filter-tab whitespace-nowrap",
+                activeCategory === category && "active"
+              )}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post, index) => (
+          {filteredPosts.map((post, index) => (
             <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
@@ -86,16 +114,16 @@ export default function BlogGrid() {
               onHoverStart={() => setHoveredCard(post.id)}
               onHoverEnd={() => setHoveredCard(null)}
             >
-              <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg bg-card/80 backdrop-blur-sm">
+              <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg bg-card border-border shadow-md">
                 <div className="aspect-video w-full overflow-hidden relative">
                   <Image
-                    src={post.image || "/placeholder.svg"}
+                    src={post.image || "/placeholder"}
                     alt={post.title}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                     fill
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-colors duration-300">
+                    <Badge variant="modern">
                       <span className="mr-1">{hoveredCard === post.id ? "✨" : post.icon}</span>
                       {post.category}
                     </Badge>

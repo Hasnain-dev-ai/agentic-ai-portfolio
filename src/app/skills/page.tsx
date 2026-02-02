@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 
 export default function SkillsPage() {
   return (
-    <main className="flex flex-col items-center justify-center w-full">
+    <main className="flex flex-col items-center justify-center w-full min-h-screen relative page-skills">
+      <div className="fixed inset-0 w-full h-full -z-50 bg-page-skills pointer-events-none" />
       <SkillsHeader />
       <SkillsShowcase />
       <SkillsTimeline />

@@ -12,7 +12,7 @@ const caseStudies = [
     id: 1,
     title: "E-Commerce Platform Redesign",
     description: "How I improved conversion rates by 35% through UX redesign and performance optimization",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/placeholder",
     tags: ["UX/UI", "Performance", "Next.js", "TypeScript"],
     metrics: [
       { icon: <BarChart className="h-4 w-4" />, label: "35% Conversion Increase" },
@@ -25,7 +25,7 @@ const caseStudies = [
     id: 2,
     title: "AI-Powered Content Management System",
     description: "Building a custom CMS with AI capabilities for a media company",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/placeholder",
     tags: ["AI/ML", "Python", "React", "Sanity.io"],
     metrics: [
       { icon: <Clock className="h-4 w-4" />, label: "60% Time Saved" },
@@ -38,7 +38,7 @@ const caseStudies = [
     id: 3,
     title: "Real-time Analytics Dashboard",
     description: "Creating a scalable analytics solution for processing millions of data points",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/placeholder",
     tags: ["Data Visualization", "WebSockets", "AWS", "D3.js"],
     metrics: [
       { icon: <Lightbulb className="h-4 w-4" />, label: "5M+ Data Points" },
@@ -62,21 +62,21 @@ export default function CaseStudiesList() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden bg-card border-border shadow-md">
                 <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-6">
                   <div className="aspect-video w-full overflow-hidden">
-                  <Image
-  src="/images/example.jpg"
-  alt="Description"
-  width={600}
-  height={400}
-/>
+                    <Image
+                      src="/images/example.jpg"
+                      alt="Description"
+                      width={600}
+                      height={400}
+                    />
                   </div>
                   <div className="flex flex-col p-6">
                     <CardHeader className="p-0 mb-4">
                       <div className="flex flex-wrap gap-2 mb-3">
                         {study.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary">
+                          <Badge key={tag} variant="3d-grey">
                             {tag}
                           </Badge>
                         ))}
@@ -96,7 +96,7 @@ export default function CaseStudiesList() {
                     </CardContent>
                     <CardFooter className="p-0 mt-6">
                       <Link href={`/case-studies/${study.slug}`}>
-                        <Button variant="outline">
+                        <Button variant="default" className="font-bold">
                           Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>

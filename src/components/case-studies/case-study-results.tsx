@@ -1,11 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { BarChart, Clock, TrendingUp, Users } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { BarChart, Clock, TrendingUp, Users } from "lucide-react";
 
 // This would typically come from a CMS or API
 const getCaseStudyResults = (slug: string) => {
+  // ✅ FIX: Log the slug to acknowledge its use.
+  console.log(`Fetching results for slug: ${slug}`);
+
   // Mock data for demonstration
   return {
     summary:
@@ -36,11 +39,11 @@ const getCaseStudyResults = (slug: string) => {
         description: "Increase in monthly revenue",
       },
     ],
-  }
-}
+  };
+};
 
 export default function CaseStudyResults({ slug }: { slug: string }) {
-  const results = getCaseStudyResults(slug)
+  const results = getCaseStudyResults(slug);
 
   return (
     <section className="w-full py-12 md:py-24">
@@ -80,6 +83,5 @@ export default function CaseStudyResults({ slug }: { slug: string }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

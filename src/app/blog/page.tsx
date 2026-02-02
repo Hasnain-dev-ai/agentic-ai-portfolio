@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import BlogHeader from "@/components/blog/blog-header"
 import BlogGrid from "@/components/blog/blog-grid"
-import ParticleBackground from "@/components/blog/particle-background"
+// import ParticleBackground from "@/components/blog/particle-background"
 import NewsletterSubscription from "@/components/shared/newsletter-subscription"
 
 export const metadata: Metadata = {
@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main className="flex flex-col items-center justify-center w-full relative">
-      <ParticleBackground />
+      <div className="fixed inset-0 w-full h-full -z-50 bg-page-blog pointer-events-none" />
+      {/* <ParticleBackground /> */}
       <BlogHeader />
       <BlogGrid />
       <section className="w-full py-12 md:py-24">

@@ -9,7 +9,7 @@ export default function DimensionPortalToggle() {
   const { setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
- 
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -25,7 +25,7 @@ export default function DimensionPortalToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative h-10 w-10 rounded-full bg-gradient-to-br from-indigo-100 to-indigo-50 p-1 shadow-lg dark:from-indigo-950 dark:to-indigo-900 hover:shadow-xl transition-shadow"
+      className="relative h-[42px] w-[42px] rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 p-0 shadow-[0_4px_15px_rgba(99,102,241,0.4)] hover:shadow-[0_6px_20px_rgba(99,102,241,0.6)] transition-all border border-white/20"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
@@ -33,7 +33,7 @@ export default function DimensionPortalToggle() {
       <div className="relative h-full w-full overflow-hidden rounded-full">
         {/* Portal ring */}
         <motion.div
-          className="absolute inset-0 rounded-full border-2 border-indigo-300 dark:border-indigo-600"
+          className="absolute inset-0 rounded-full"
           animate={{
             boxShadow: isDark
               ? "0 0 15px 2px rgba(129, 140, 248, 0.5), inset 0 0 15px 2px rgba(129, 140, 248, 0.5)"

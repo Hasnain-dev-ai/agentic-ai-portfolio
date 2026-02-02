@@ -1,25 +1,28 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, User } from "lucide-react"
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, Clock, User } from "lucide-react";
 
 // This would typically come from a CMS or API
 const getCaseStudyData = (slug: string) => {
+  // ✅ FIX: Log the slug to acknowledge its use.
+  console.log(`Fetching header data for slug: ${slug}`);
+
   // Mock data for demonstration
   return {
     title: "E-Commerce Platform Redesign",
     description: "How I improved conversion rates by 35% through UX redesign and performance optimization",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/placeholder",
     date: "March 2025",
     duration: "3 months",
     client: "Fashion Retailer Inc.",
     tags: ["UX/UI", "Performance", "Next.js", "TypeScript"],
-  }
-}
+  };
+};
 
 export default function CaseStudyHeader({ slug }: { slug: string }) {
-  const caseStudy = getCaseStudyData(slug)
+  const caseStudy = getCaseStudyData(slug);
 
   return (
     <section className="w-full py-12 md:py-24 relative">
@@ -81,6 +84,5 @@ export default function CaseStudyHeader({ slug }: { slug: string }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

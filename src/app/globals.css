@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
+html {
+  overflow-y: scroll;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 1. Define Base CSS Variables for Shadcn UI                                 */
+/* This is the section Shadcn components read from directly.                  */
+/* -------------------------------------------------------------------------- */
 :root {
-  /* Base colors */
+  /* Light Mode Values */
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
-
-  /* Component colors */
   --card: 0 0% 100%;
   --card-foreground: 240 10% 3.9%;
   --popover: 0 0% 100%;
@@ -15,7 +21,7 @@
   --secondary: 240 4.8% 95.9%;
   --secondary-foreground: 240 5.9% 10%;
   --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
+  --muted-foreground: 240 3.8% 45%;
   --accent: 240 4.8% 95.9%;
   --accent-foreground: 240 5.9% 10%;
   --destructive: 0 84.2% 60.2%;
@@ -23,44 +29,91 @@
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
   --ring: 240 5.9% 10%;
-
-  /* Gradient colors */
-  --gradient-purple: 267 100% 66%;
-  --gradient-blue: 217 100% 60%;
-  --gradient-cyan: 187 100% 43%;
-
-  /* Radius */
   --radius: 0.75rem;
+
+  /* Custom Variables */
+  --footer-bg: 0 0% 97%;
+  --link-hover-light: 240 5.9% 10%;
+  --link-hover-dark: 0 0% 98%;
+  
+  /* B&W Theme */
+  --text-primary: 0 0% 0%; /* Black */
+  --text-secondary: 240 3.8% 45%;
+  --badge-grey: 240 4.8% 90%;
+  --badge-border: 240 5.9% 80%;
+  
+  /* Rich Gradient Theme - Light Mode */
+  --gradient-primary: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+  --gradient-secondary: linear-gradient(135deg, #60a5fa 0%, #5eead4 100%);
+  --gradient-surface: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(240, 249, 255, 0.5));
+  --gradient-card-border: linear-gradient(135deg, rgba(129, 140, 248, 0.3), rgba(192, 132, 252, 0.3), rgba(244, 114, 182, 0.3));
+  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+  --gradient-text-rich: linear-gradient(to right, #4f46e5, #9333ea, #0891b2);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
 }
 
 .dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
+  /* Dark Mode Overrides */
+  --background: 240 10% 2%; /* Deeper black */
+  --foreground: 0 0% 100%; /* Pure white */
+  
+  /* B&W Theme */
+  --text-primary: 0 0% 100%;
+  --text-secondary: 240 5% 70%;
+  --badge-grey: 240 3.7% 15%;
+  --badge-border: 240 3.7% 25%;
+
+  --card: 240 10% 4%;
+  --card-foreground: 0 0% 100%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
   --primary-foreground: 240 5.9% 10%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
+  --secondary: 240 3.7% 12%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 240 3.7% 12%;
+  --muted-foreground: 240 5% 70%;
+  --accent: 240 3.7% 12%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
+  --border: 240 3.7% 15%;
+  --input: 240 3.7% 15%;
   --ring: 240 4.9% 83.9%;
+
+  /* Custom Variables for Dark Mode */
+  --footer-bg: 240 10% 3%;
+  --bento-glow: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.1), rgba(138, 43, 226, 0) 70%);
+  --link-hover-light: 240 5.9% 10%;
+  --link-hover-dark: 0 0% 98%;
+
+  /* Rich Gradient Theme - Dark Mode */
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+  --gradient-surface: linear-gradient(145deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.4));
+  --gradient-card-border: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  --gradient-text-rich: linear-gradient(to right, #c084fc, #e879f9, #2dd4bf);
+
+  --radius: 0.75rem;
+  /* Keep radius consistent */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
 }
 
-@theme inline {
-  /* Base */
+
+/* -------------------------------------------------------------------------- */
+/* 2. Configure Tailwind CSS v4 Theme                                         */
+/* This block tells Tailwind how to create utility classes from your vars.    */
+/* -------------------------------------------------------------------------- */
+@theme {
+  /* Map the :root variables to Tailwind's --color-* namespace */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-
-  /* Components */
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
   --color-popover: hsl(var(--popover));
@@ -79,103 +132,247 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  /* Border radius */
+  --font-family-sans: var(--font-sans);
+  --font-family-montez: var(--font-montez);
+
+  /* Map custom variables */
+  --color-footer-bg: hsl(var(--footer-bg));
+  --color-link-hover-light: hsl(var(--link-hover-light));
+  --color-link-hover-dark: hsl(var(--link-hover-dark));
+
+  /* Define your one-off brand colors */
+  --color-github: #181717;
+  --color-linkedin: #0A66C2;
+  --color-x-black: #000000;
+  --color-gmail-red: #EA4335;
+
+  /* Map radius variables */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-
-  /* Animations */
-  --animation-accordion-down: accordion-down 0.2s ease-out;
-  --animation-accordion-up: accordion-up 0.2s ease-out;
-
-  /* Font family */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Base styles */
+
+/* -------------------------------------------------------------------------- */
+/* 3. Your Custom Classes and Animations (No Changes Needed)                  */
+/* -------------------------------------------------------------------------- */
+
+/* Custom variant for manual dark mode toggling */
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
   @apply bg-background text-foreground min-h-screen antialiased;
-  margin-top: 80;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-* {
-  @apply border-border;
+a {
+  @apply text-foreground transition-colors duration-200;
 }
 
-/* Custom utility classes */
+.dark a:hover {
+  @apply text-link-hover-dark;
+}
+
+a:hover {
+  @apply text-link-hover-light;
+}
+
+.card {
+  @apply bg-card text-card-foreground border border-border rounded-lg shadow-sm;
+}
+
+header,
+footer {
+  @apply bg-card border-b border-border;
+}
+
+footer {
+  @apply bg-footer-bg;
+}
+
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500;
 }
 
-.bento-grid {
+/* Vibrant & 3D Utility Classes */
+.vibrant-text {
+  @apply bg-clip-text text-transparent bg-[image:var(--gradient-text-rich)] filter drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)];
+}
+
+.dark .vibrant-text {
+  @apply drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)];
+}
+
+.premium-3d-button {
+  @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium transition-all duration-300 active:scale-95;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 4px 0 hsl(var(--muted-foreground) / 0.5), 0 8px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid hsl(var(--border));
+}
+
+.dark .premium-3d-button {
+  box-shadow: 0 4px 0 hsl(var(--foreground) / 0.1), 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.premium-3d-button:hover {
+  @apply -translate-y-[1px] shadow-[0_5px_0_hsl(var(--muted-foreground)_/_0.5),0_10px_18px_rgba(0,0,0,0.25)];
+}
+
+/* Modern Badge System */
+.modern-badge {
+  @apply inline-flex items-center rounded-md px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider transition-all duration-300;
+  background-color: hsl(var(--badge-grey));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--badge-border));
+}
+
+.dark .modern-badge {
+  background-color: hsl(var(--badge-grey) / 0.8);
+  border-color: hsl(var(--badge-border) / 0.5);
+}
+
+/* Updated High-Contrast Tab styling */
+.filter-tab {
+  @apply px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300 border border-transparent;
+  background-color: #f3f4f6; /* Light gray in light mode */
+  color: #4b5563; /* Gray-600 */
+}
+
+.dark .filter-tab {
+  background-color: #1f2937; /* Muted dark gray */
+  color: #9ca3af; /* Gray-400 */
+}
+
+.filter-tab:hover {
+  @apply scale-105;
+}
+
+.filter-tab.active {
+  @apply shadow-md scale-105;
+  background-color: #000000; /* Black bg in light mode */
+  color: #ffffff;
+}
+
+.dark .filter-tab.active {
+  background-color: #ffffff; /* White/Light Black... actually user said light black? let's stick to high contrast white/black toggle */
+  color: #000000;
+}
+
+/* Specifically for Dark Mode Active Tab if it should be "Light Black" as user said */
+.dark .filter-tab.active {
+  background-color: #f9fafb; /* Off-white for max visibility */
+  color: #000000;
+}
+
+.glass-card-3d:hover {
+  @apply -translate-y-2 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)];
+}
+
+.dark .glass-card-3d:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Bento Grid System */
+.bento-grid-12 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   gap: 1.5rem;
 }
 
-.bento-box {
-  @apply rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+@media (max-width: 1024px) {
+  .bento-grid-12 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-grid-12 {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Elegant Bento Search Bar */
+.bento-search-box {
+  @apply relative flex items-center w-full max-w-2xl mx-auto rounded-2xl p-1 transition-all duration-500 bg-card border border-border;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.dark .bento-search-box {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.bento-search-box:focus-within {
+  @apply scale-[1.01] -translate-y-0.5 shadow-xl border-foreground/20;
+}
+
+.bento-search-box input {
+  @apply bg-transparent border-none focus:ring-0 text-lg py-4 px-6 w-full font-medium placeholder:text-muted-foreground/30;
+}
+
+.bento-search-icon {
+  @apply ml-4 text-muted-foreground;
 }
 
 .portal-animation {
   animation: portal-spin 8s linear infinite;
 }
 
-/* Keyframes */
 @keyframes portal-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
 }
 
 @keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
-  }
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
 }
 
-/* ... (your existing CSS) ... */
-
-/* Tablet mode adjustments */
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* Example: Adjust font sizes for tablet */
-  body {
-    font-size: 1rem; /* Adjust as needed */
-  }
-
-  .bento-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid columns */
-  }
-
-  /* Add other tablet-specific styles here */
-}
-
-/* Mobile mode adjustments (optional, if needed) */
 @media (max-width: 767px) {
-  /* Example: Stack elements vertically on mobile */
   .bento-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
   }
-
-  /* Add other mobile-specific styles here */
 }
 
-/* Desktop mode adjustments (optional) */
-@media (min-width: 1025px) {
-    /* desktop specific styles */
+/* -------------------------------------------------------------------------- */
+/* 4. Page Backgrounds (Striped for Minimalist)                               */
+/* -------------------------------------------------------------------------- */
+
+.bg-page-home, .bg-page-about, .bg-page-projects, .bg-page-blog, .bg-page-services, .bg-page-contact, .bg-page-casestudies, .bg-page-search, .bg-page-skills {
+  @apply fixed inset-0 w-full h-full -z-50 pointer-events-none;
+}
+
+:not(.dark) .bg-page-home, :not(.dark) .bg-page-about, :not(.dark) .bg-page-projects, :not(.dark) .bg-page-blog, :not(.dark) .bg-page-services, :not(.dark) .bg-page-contact, :not(.dark) .bg-page-casestudies, :not(.dark) .bg-page-search, :not(.dark) .bg-page-skills {
+  background-color: #ffffff;
+}
+
+.dark .bg-page-home, .dark .bg-page-about, .dark .bg-page-projects, .dark .bg-page-blog, .dark .dark .bg-page-services, .dark .bg-page-contact, .dark .bg-page-casestudies, .dark .bg-page-search, .dark .bg-page-skills {
+  background-color: #020205;
+}
+
+.vibrant-badge-glass-3d {
+  @apply inline-flex items-center rounded-full px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300;
+  background: hsl(var(--muted) / 0.5);
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.vibrant-badge-glass-3d:hover {
+  @apply -translate-y-0.5 bg-muted/70;
+}
+
+@keyframes blessing-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-blessing-in {
+  animation: blessing-in 0.4s ease-out;
 }

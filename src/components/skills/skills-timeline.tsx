@@ -46,9 +46,9 @@ export default function SkillsTimeline() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Skill Evolution</div>
+          <div className="vibrant-badge-glass-3d">Skill Evolution</div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            My Learning <span className="gradient-text">Journey</span>
+            My Learning <span className="vibrant-text">Journey</span>
           </h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
             How my skills have evolved over time, from web fundamentals to advanced development.
@@ -71,7 +71,9 @@ export default function SkillsTimeline() {
               >
                 <div className={`md:flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                   {/* Timeline dot */}
-                  <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 z-10" />
+                  <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[var(--gradient-primary)] z-10 shadow-[0_4px_0_rgba(0,0,0,0.2),0_8px_15px_rgba(0,0,0,0.1)] border-4 border-background flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-white shadow-inner" />
+                  </div>
 
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"} pl-10 md:pl-0`}>
@@ -79,7 +81,7 @@ export default function SkillsTimeline() {
                       <CardHeader className={`bg-gradient-to-r ${item.color} text-white`}>
                         <CardTitle className="flex items-center justify-between">
                           <span>{item.title}</span>
-                          <Badge variant="outline" className="bg-white/20 text-white">
+                          <Badge variant="premium-3d" className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
                             {item.year}
                           </Badge>
                         </CardTitle>
@@ -88,7 +90,7 @@ export default function SkillsTimeline() {
                         <p className="mb-4">{item.description}</p>
                         <div className="flex flex-wrap gap-2">
                           {item.skills.map((skill) => (
-                            <Badge key={skill} variant="secondary">
+                            <Badge key={skill} variant="gradient">
                               {skill}
                             </Badge>
                           ))}
