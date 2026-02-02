@@ -30,10 +30,14 @@
     "gsap": "^3.14.2",
     "instantsearch.js": "^4.78.3",
     "lucide-react": "^0.483.0",
+<<<<<<< HEAD
     "next": "15.3.8",
+=======
+    "next": "16.1.6",
+>>>>>>> 9fe77c9 (Update: Added full portfolio content and Agentic AI features)
     "next-themes": "^0.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-icons": "^5.5.0",
     "react-instantsearch": "^7.15.8",
     "react-instantsearch-nextjs": "^0.4.9",
@@ -50,15 +54,17 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/node": "^20.19.0",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3",
     "eslint": "^9",
-    "eslint-config-next": "15.2.3",
+    "eslint-config-next": "16.1.6",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.4",
     "typescript": "^5"
   },
   "overrides": {
-    "mkdirp": "0.5.6"
+    "mkdirp": "0.5.6",
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3"
   }
 }
